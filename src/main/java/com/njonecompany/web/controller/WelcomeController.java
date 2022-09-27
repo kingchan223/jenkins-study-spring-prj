@@ -24,6 +24,14 @@ public class WelcomeController {
 
     }
 
+
+    @GetMapping("/")
+    public String hi() {
+        logger.debug("say hi");
+        return "hi";
+
+    }
+
     private String getMessage() {
         return "Hi, there";
     }
