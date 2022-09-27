@@ -25,11 +25,10 @@ public class WelcomeController {
     }
 
 
-    @GetMapping("/")
+    @GetMapping("/hi")
     public String hi() {
         logger.debug("say hi");
         return "hi";
-
     }
 
     private String getMessage() {
