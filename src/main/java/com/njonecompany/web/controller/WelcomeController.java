@@ -26,13 +26,20 @@ public class WelcomeController {
 
 
     @GetMapping("/hi")
-    public String hi() {
-        logger.debug("say hi");
-        return "hi";
+    public String hi(Model model) {
+        logger.debug("Welcome to njonecompany.com...");
+        model.addAttribute("msg", getHi());
+        model.addAttribute("today", new Date());
+        System.out.println(model.getAttribute("today"));
+        return "index";
     }
 
     private String getMessage() {
         return "Hi, there";
+    }
+
+    private String getHi() {
+        return "HIHIHIHIHIHIHIHIHIHIHIHIHIHIHI";
     }
 
 }
